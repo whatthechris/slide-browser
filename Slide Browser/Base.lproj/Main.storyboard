@@ -35,7 +35,7 @@
         <!--Web View Controller-->
         <scene sceneID="3la-my-KsD">
             <objects>
-                <viewController id="M1F-aO-MrQ" customClass="WebViewController" customModule="Slide_Browser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="M1F-aO-MrQ" customClass="WebViewController" customModule="Slide_Browser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RP6-QG-tV0"/>
                         <viewControllerLayoutGuide type="bottom" id="cCx-yV-Au9"/>
@@ -44,20 +44,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WebView Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKB-Gk-8oT">
-                                <rect key="frame" x="104.5" y="323" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d48-sN-xwx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sKB-Gk-8oT" firstAttribute="centerX" secondItem="j3U-mA-zKT" secondAttribute="centerX" id="YVI-jt-zbP"/>
-                            <constraint firstItem="sKB-Gk-8oT" firstAttribute="centerY" secondItem="j3U-mA-zKT" secondAttribute="centerY" id="x2z-bq-ecq"/>
+                            <constraint firstItem="d48-sN-xwx" firstAttribute="top" secondItem="RP6-QG-tV0" secondAttribute="bottom" id="G4D-h9-1hh"/>
+                            <constraint firstItem="d48-sN-xwx" firstAttribute="leading" secondItem="j3U-mA-zKT" secondAttribute="leadingMargin" constant="-16" id="GqM-rm-yd5"/>
+                            <constraint firstItem="cCx-yV-Au9" firstAttribute="top" secondItem="d48-sN-xwx" secondAttribute="bottom" id="XJb-lJ-tri"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d48-sN-xwx" secondAttribute="trailing" constant="-16" id="w8g-gz-Icl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pgK-rF-aMT"/>
+                    <connections>
+                        <outlet property="webView" destination="d48-sN-xwx" id="tUU-3J-k5y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQK-rQ-OZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

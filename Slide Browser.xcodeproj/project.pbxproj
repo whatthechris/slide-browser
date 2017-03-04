@@ -16,6 +16,7 @@
 		4248E90A1E6B75CE00DA207C /* Slide_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E9091E6B75CE00DA207C /* Slide_BrowserUITests.swift */; };
 		4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */; };
 		4248E91D1E6B7CCC00DA207C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91C1E6B7CCC00DA207C /* WebViewController.swift */; };
+		4248E9201E6B802000DA207C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4248E91F1E6B802000DA207C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4248E9191E6B7A1E00DA207C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4248E91C1E6B7CCC00DA207C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4248E91F1E6B802000DA207C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4248E9201E6B802000DA207C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 				4248E8FD1E6B75CE00DA207C /* Slide BrowserTests */,
 				4248E9081E6B75CE00DA207C /* Slide BrowserUITests */,
 				4248E8E71E6B75CD00DA207C /* Products */,
+				4248E91E1E6B802000DA207C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +145,14 @@
 				4248E9181E6B7A1D00DA207C /* Slide Browser-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		4248E91E1E6B802000DA207C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4248E91F1E6B802000DA207C /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

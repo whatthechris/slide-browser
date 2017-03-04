@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
 class WebViewController: UIViewController {
 
+    @IBOutlet var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // initializes the slide menu
         if self.revealViewController() != nil {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        // Do any additional setup after loading the view.
+        // sets the inital URL of the web view to google
+        var URL = NSURL(string: "https://www.google.com")
+        webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +31,13 @@ class WebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     /*
     // MARK: - Navigation
 
