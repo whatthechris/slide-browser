@@ -17,6 +17,7 @@
 		4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */; };
 		4248E91D1E6B7CCC00DA207C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91C1E6B7CCC00DA207C /* WebViewController.swift */; };
 		4248E9201E6B802000DA207C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4248E91F1E6B802000DA207C /* WebKit.framework */; };
+		4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E9231E6BB52D00DA207C /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4248E91C1E6B7CCC00DA207C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4248E91F1E6B802000DA207C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4248E9231E6BB52D00DA207C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		4248E8E81E6B75CD00DA207C /* Slide Browser */ = {
 			isa = PBXGroup;
 			children = (
+				4248E9231E6BB52D00DA207C /* MenuViewController.swift */,
 				4248E91C1E6B7CCC00DA207C /* WebViewController.swift */,
 				4248E9171E6B79FF00DA207C /* SWRevealViewController */,
 				4248E8E91E6B75CD00DA207C /* AppDelegate.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4248E8EC1E6B75CD00DA207C /* ViewController.swift in Sources */,
+				4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */,
 				4248E8EA1E6B75CD00DA207C /* AppDelegate.swift in Sources */,
 				4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */,
 				4248E91D1E6B7CCC00DA207C /* WebViewController.swift in Sources */,
@@ -543,6 +547,7 @@
 				4248E9101E6B75CE00DA207C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4248E9111E6B75CE00DA207C /* Build configuration list for PBXNativeTarget "Slide BrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +556,7 @@
 				4248E9131E6B75CE00DA207C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4248E9141E6B75CE00DA207C /* Build configuration list for PBXNativeTarget "Slide BrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +565,7 @@
 				4248E9161E6B75CE00DA207C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
