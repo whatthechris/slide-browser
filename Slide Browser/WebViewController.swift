@@ -14,6 +14,8 @@ class WebViewController: UIViewController {
     @IBOutlet var webView: UIWebView!
     
     var url: String?
+    //sets inital URL
+    var initialURL: String = "https://www.google.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +31,10 @@ class WebViewController: UIViewController {
             var URL = NSURL(string: "https://" + unWrapURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
         } else {
-            var URL = NSURL(string: "https://www.google.com")
+            var URL = NSURL(string: initialURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
+            print(URL)
         }
-        
 
     }
 
@@ -47,6 +49,7 @@ class WebViewController: UIViewController {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+
 
     /*
     // MARK: - Navigation
