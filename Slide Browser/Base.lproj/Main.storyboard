@@ -125,7 +125,7 @@
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="goButton:" destination="Zqc-AE-NPR" eventType="touchUpInside" id="Ecl-on-pZ6"/>
-                                    <segue destination="M1F-aO-MrQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3bJ-Il-cLT"/>
+                                    <segue destination="M1F-aO-MrQ" kind="custom" identifier="urlReturn" customClass="SWRevealViewControllerSeguePushController" id="3bJ-Il-cLT"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9Y-eJ-5ye">
@@ -134,6 +134,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="urlFieldPrimaryActionTriggered:" destination="Zqc-AE-NPR" eventType="primaryActionTriggered" id="NOA-du-Zvp"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.63874206004432565" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

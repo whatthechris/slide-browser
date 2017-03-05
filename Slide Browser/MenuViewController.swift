@@ -40,6 +40,12 @@ class MenuViewController: UIViewController {
         menuURL = urlField.text
     }
     
+    //Passes the text field url and segues to webView when return key is tapped
+    @IBAction func urlFieldPrimaryActionTriggered(_ sender: Any) {
+        menuURL = urlField.text
+        performSegue(withIdentifier: "urlReturn", sender: nil)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var webViewPage : WebViewController = segue.destination as! WebViewController
         webViewPage.url = menuURL
