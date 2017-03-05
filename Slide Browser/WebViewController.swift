@@ -12,7 +12,7 @@ import WebKit
 class WebViewController: UIViewController {
 
     @IBOutlet var webView: UIWebView!
-
+    
     var url: String?
     
     override func viewDidLoad() {
