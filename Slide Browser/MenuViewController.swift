@@ -24,16 +24,19 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Opens the keyboard and focuses on the urlField when theis view appears
     override func viewDidAppear(_ animated: Bool) {
         urlField.becomeFirstResponder()
     }
     
     @IBAction func menuButton1(_ sender: Any) {
-        menuURL = "www.facebook.com"
+        menuURL = "facebook.com"
+        urlField.text = menuURL
     }
 
     @IBAction func menuButton2(_ sender: Any) {
-        menuURL = "www.brainstation.io"
+        menuURL = "brainstation.io"
+        urlField.text = menuURL
     }
     
     @IBAction func goButton(_ sender: Any) {
@@ -46,6 +49,7 @@ class MenuViewController: UIViewController {
         performSegue(withIdentifier: "urlReturn", sender: nil)
     }
 
+    //Passes the text field url when segueing to the webview
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var webViewPage : WebViewController = segue.destination as! WebViewController
         webViewPage.url = menuURL
