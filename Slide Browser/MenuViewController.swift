@@ -9,6 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+    @IBOutlet var urlField: UITextField!
 
     var menuURL:String?
     
@@ -17,10 +18,14 @@ class MenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        urlField.becomeFirstResponder()
     }
     
     @IBAction func menuButton1(_ sender: Any) {
@@ -29,6 +34,10 @@ class MenuViewController: UIViewController {
 
     @IBAction func menuButton2(_ sender: Any) {
         menuURL = "www.brainstation.io"
+    }
+    
+    @IBAction func goButton(_ sender: Any) {
+        menuURL = urlField.text
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
