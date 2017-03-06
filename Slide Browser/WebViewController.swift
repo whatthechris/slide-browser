@@ -14,8 +14,10 @@ class WebViewController: UIViewController {
     @IBOutlet var webView: UIWebView!
     
     var url: String?
+    var backButtonTapped = false
+    
     //sets inital URL
-    var initialURL: String = "https://www.google.com"
+    var initialURL: String = "http://www.google.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +30,17 @@ class WebViewController: UIViewController {
         // sets the inital URL of the web view to google
 
         if let unWrapURL = url {
-            var URL = NSURL(string: "https://" + unWrapURL)
+            var URL = NSURL(string: "http://" + unWrapURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
         } else {
             var URL = NSURL(string: initialURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
             print(URL)
         }
-
+        
+        if backButtonTapped == true && webView.canGoBack == true{
+            webView.goBack()
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,7 @@ class MenuViewController: UIViewController {
     @IBOutlet var urlField: UITextField!
 
     var menuURL:String?
+    var menuBackButtonTapped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,10 @@ class MenuViewController: UIViewController {
         menuURL = urlField.text
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        menuBackButtonTapped = true
+    }
+    
     //Passes the text field url and segues to webView when return key is tapped
     @IBAction func urlFieldPrimaryActionTriggered(_ sender: Any) {
         menuURL = urlField.text
@@ -53,6 +58,7 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var webViewPage : WebViewController = segue.destination as! WebViewController
         webViewPage.url = menuURL
+        webViewPage.backButtonTapped = menuBackButtonTapped
     }
     
     /*
