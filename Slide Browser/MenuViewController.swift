@@ -61,6 +61,10 @@ class MenuViewController: UIViewController {
         webViewPage.backButtonTapped = menuBackButtonTapped
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
