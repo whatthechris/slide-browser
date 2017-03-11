@@ -14,6 +14,11 @@ class MenuViewController: UIViewController {
     var menuURL:String?
     var menuBackButtonTapped = false
     
+    //hides status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,10 +64,6 @@ class MenuViewController: UIViewController {
         var webViewPage : WebViewController = segue.destination as! WebViewController
         webViewPage.url = menuURL
         webViewPage.backButtonTapped = menuBackButtonTapped
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     /*

@@ -19,6 +19,10 @@ class WebViewController: UIViewController {
     //sets inital URL
     var initialURL: String = "http://www.google.com"
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,10 +57,6 @@ class WebViewController: UIViewController {
         
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
 
 
