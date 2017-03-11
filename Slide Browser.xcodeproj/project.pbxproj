@@ -15,9 +15,9 @@
 		4248E8FF1E6B75CE00DA207C /* Slide_BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E8FE1E6B75CE00DA207C /* Slide_BrowserTests.swift */; };
 		4248E90A1E6B75CE00DA207C /* Slide_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E9091E6B75CE00DA207C /* Slide_BrowserUITests.swift */; };
 		4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */; };
-		4248E91D1E6B7CCC00DA207C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E91C1E6B7CCC00DA207C /* WebViewController.swift */; };
 		4248E9201E6B802000DA207C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4248E91F1E6B802000DA207C /* WebKit.framework */; };
 		4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E9231E6BB52D00DA207C /* MenuViewController.swift */; };
+		425FB2191E73A5FB00B2CBB8 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		4248E9181E6B7A1D00DA207C /* Slide Browser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slide Browser-Bridging-Header.h"; sourceTree = "<group>"; };
 		4248E9191E6B7A1E00DA207C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4248E91A1E6B7A1E00DA207C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		4248E91C1E6B7CCC00DA207C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4248E91F1E6B802000DA207C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4248E9231E6BB52D00DA207C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 		4248E8E81E6B75CD00DA207C /* Slide Browser */ = {
 			isa = PBXGroup;
 			children = (
+				425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */,
 				4248E9231E6BB52D00DA207C /* MenuViewController.swift */,
-				4248E91C1E6B7CCC00DA207C /* WebViewController.swift */,
 				4248E9171E6B79FF00DA207C /* SWRevealViewController */,
 				4248E8E91E6B75CD00DA207C /* AppDelegate.swift */,
 				4248E8EB1E6B75CD00DA207C /* ViewController.swift */,
@@ -226,6 +226,7 @@
 				TargetAttributes = {
 					4248E8E51E6B75CD00DA207C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TM7GQQLBEH;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -296,8 +297,8 @@
 				4248E8EC1E6B75CD00DA207C /* ViewController.swift in Sources */,
 				4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */,
 				4248E8EA1E6B75CD00DA207C /* AppDelegate.swift in Sources */,
+				425FB2191E73A5FB00B2CBB8 /* WKWebViewController.swift in Sources */,
 				4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */,
-				4248E91D1E6B7CCC00DA207C /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +451,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TM7GQQLBEH;
 				INFOPLIST_FILE = "Slide Browser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.whatthechris.Slide-Browser";
@@ -465,6 +468,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TM7GQQLBEH;
 				INFOPLIST_FILE = "Slide Browser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.whatthechris.Slide-Browser";
