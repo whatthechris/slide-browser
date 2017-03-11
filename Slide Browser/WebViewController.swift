@@ -33,6 +33,10 @@ class WebViewController: UIViewController {
         
         // sets the inital URL of the web view to google
 
+        if backButtonTapped == true {
+            webView.goBack()
+        }
+        
         if let unWrapURL = url {
             var URL = NSURL(string: "http://" + unWrapURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
@@ -40,10 +44,6 @@ class WebViewController: UIViewController {
             var URL = NSURL(string: initialURL)
             webView.loadRequest(NSURLRequest(url: URL! as URL) as URLRequest)
             print(URL)
-        }
-        
-        if backButtonTapped == true && webView.canGoBack == true{
-            webView.goBack()
         }
     }
 
