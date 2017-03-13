@@ -12,6 +12,7 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
     
     var webView: WKWebView!
     var progBar = UIProgressView()
+    var pullRefreshBar = UIProgressView()
 
     var url: String?
     var backButtonTapped = false
@@ -37,6 +38,12 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
         progBar.tintColor = UIColor.blue
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         webView.addSubview(progBar)
+        
+        // Draws the progress bar, sets progress to 0
+        pullRefreshBar = UIProgressView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        pullRefreshBar.progress = 0.0
+        pullRefreshBar.tintColor = UIColor.red
+        webView.addSubview(pullRefreshBar)
     }
     
     // Updates the progress bar when webView's estimatedProgress changes
@@ -81,8 +88,13 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
     
     //add pull to refresh
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if (scrollView.contentOffset.y < -150){
+        
+        if (scrollView.contentOffset.y < 0){
+            pullRefreshBar.progress = Float(scrollView.contentOffset.y*(-0.01))
+        }
+        if (scrollView.contentOffset.y < -100){
             webView.reload()
+            pullRefreshBar.progress = 0.0
         }
     }
     
