@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate{
     
     var webView: WKWebView!
     var progBar = UIProgressView()
@@ -56,6 +56,7 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate 
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         webView.navigationDelegate = self
+        webView.scrollView.delegate = self
         view = webView
         
         // initializes the slide menu
@@ -76,17 +77,13 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate 
         if backButtonTapped == true && webView.canGoBack == true{
             webView.goBack()
         }
-        
-        //add refresh button
-        let button = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 50))
-        button.backgroundColor = UIColor.blue
-        button.addTarget(self, action: #selector(pressButton(button:)), for: .touchUpInside)
-        self.view.addSubview(button)
-        
     }
     
-    func pressButton(button: UIButton) {
-        webView.reload()
+    //add pull to refresh
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if (scrollView.contentOffset.y < -150){
+            webView.reload()
+        }
     }
     
     //removes the webView observer
