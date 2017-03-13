@@ -61,9 +61,10 @@ class MenuViewController: UIViewController {
 
     //Passes the text field url when segueing to the WKWebview
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var webViewPage : WKWebViewController = segue.destination as! WKWebViewController
+        let webViewPage : WKWebViewController = segue.destination as! WKWebViewController
         webViewPage.url = menuURL
         webViewPage.backButtonTapped = menuBackButtonTapped
+        webViewPage.progBar.progress = 0.0
     }
     
     /*
