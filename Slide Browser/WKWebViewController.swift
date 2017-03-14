@@ -72,7 +72,7 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
         }
         
         if let unWrapURL = url {
-            let myURL = URL(string: "https://" + unWrapURL)
+            let myURL = URL(string: "http://" + unWrapURL)
             let myRequest = URLRequest(url: myURL!)
             webView.load(myRequest)
         } else {
