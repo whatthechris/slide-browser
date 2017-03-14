@@ -86,18 +86,25 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
         }
     }
     
-    //add pull to refresh
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.y < 0){
             pullRefreshBar.progress = Float(scrollView.contentOffset.y*(-0.01))
         }
         if (scrollView.contentOffset.y < -100){
-            webView.reload()
-            pullRefreshBar.progress = 0.0
+            pullRefreshBar.tintColor = UIColor.green
+        } else {
+            pullRefreshBar.tintColor = UIColor.red
         }
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if (scrollView.contentOffset.y < -100){
+            webView.reload()
+            pullRefreshBar.tintColor = UIColor.red
+            pullRefreshBar.progress = 0.0
+        }
+    }
+
     //removes the webView observer
     deinit {
         webView!.removeObserver(self, forKeyPath: "estimatedProgress")
