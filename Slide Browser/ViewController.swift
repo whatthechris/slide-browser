@@ -31,15 +31,13 @@ class ViewController: UIViewController {
         self.scrollView.addSubview(V3.view)
         V3.didMove(toParentViewController: self)
         
-        var V2Frame : CGRect = V2.view.frame
-        V2Frame.origin.x = self.view.frame.width
-        V2.view.frame = V2Frame
+        V2.view.frame = CGRect(x: self.view.frame.width, y: 0, width: 100, height: self.view.frame.height)
         
-        var V3Frame : CGRect = V2.view.frame
-        V3Frame.origin.x = 2 * self.view.frame.width
+        var V3Frame : CGRect = V3.view.frame
+        V3Frame.origin.x = 2 * self.view.frame.width - (self.view.frame.width - 100)
         V3.view.frame = V3Frame
         
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.size.height)
+        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 2.5 , height: self.view.frame.size.height)
     }
 
     override func didReceiveMemoryWarning() {
