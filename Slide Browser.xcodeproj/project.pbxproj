@@ -18,6 +18,12 @@
 		4248E9201E6B802000DA207C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4248E91F1E6B802000DA207C /* WebKit.framework */; };
 		4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248E9231E6BB52D00DA207C /* MenuViewController.swift */; };
 		425FB2191E73A5FB00B2CBB8 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */; };
+		42FF60BF1E79F40800AAC9C2 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF60BD1E79F40800AAC9C2 /* View1.swift */; };
+		42FF60C01E79F40800AAC9C2 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FF60BE1E79F40800AAC9C2 /* View1.xib */; };
+		42FF60C31E79F57800AAC9C2 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF60C11E79F57800AAC9C2 /* View2.swift */; };
+		42FF60C41E79F57800AAC9C2 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FF60C21E79F57800AAC9C2 /* View2.xib */; };
+		42FF60C71E79F85500AAC9C2 /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF60C51E79F85500AAC9C2 /* View3.swift */; };
+		42FF60C81E79F85500AAC9C2 /* View3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FF60C61E79F85500AAC9C2 /* View3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		4248E91F1E6B802000DA207C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4248E9231E6BB52D00DA207C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		42FF60BD1E79F40800AAC9C2 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		42FF60BE1E79F40800AAC9C2 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View1.xib; sourceTree = "<group>"; };
+		42FF60C11E79F57800AAC9C2 /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		42FF60C21E79F57800AAC9C2 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View2.xib; sourceTree = "<group>"; };
+		42FF60C51E79F85500AAC9C2 /* View3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
+		42FF60C61E79F85500AAC9C2 /* View3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +121,18 @@
 		4248E8E81E6B75CD00DA207C /* Slide Browser */ = {
 			isa = PBXGroup;
 			children = (
+				42FF60C11E79F57800AAC9C2 /* View2.swift */,
+				42FF60C21E79F57800AAC9C2 /* View2.xib */,
+				42FF60BD1E79F40800AAC9C2 /* View1.swift */,
+				42FF60BE1E79F40800AAC9C2 /* View1.xib */,
 				425FB2181E73A5FB00B2CBB8 /* WKWebViewController.swift */,
 				4248E9231E6BB52D00DA207C /* MenuViewController.swift */,
 				4248E9171E6B79FF00DA207C /* SWRevealViewController */,
 				4248E8E91E6B75CD00DA207C /* AppDelegate.swift */,
 				4248E8EB1E6B75CD00DA207C /* ViewController.swift */,
 				4248E8ED1E6B75CE00DA207C /* Main.storyboard */,
+				42FF60C51E79F85500AAC9C2 /* View3.swift */,
+				42FF60C61E79F85500AAC9C2 /* View3.xib */,
 				4248E8F01E6B75CE00DA207C /* Assets.xcassets */,
 				4248E8F21E6B75CE00DA207C /* LaunchScreen.storyboard */,
 				4248E8F51E6B75CE00DA207C /* Info.plist */,
@@ -269,6 +287,9 @@
 			files = (
 				4248E8F41E6B75CE00DA207C /* LaunchScreen.storyboard in Resources */,
 				4248E8F11E6B75CE00DA207C /* Assets.xcassets in Resources */,
+				42FF60C81E79F85500AAC9C2 /* View3.xib in Resources */,
+				42FF60C01E79F40800AAC9C2 /* View1.xib in Resources */,
+				42FF60C41E79F57800AAC9C2 /* View2.xib in Resources */,
 				4248E8EF1E6B75CE00DA207C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +319,9 @@
 				4248E9241E6BB52D00DA207C /* MenuViewController.swift in Sources */,
 				4248E8EA1E6B75CD00DA207C /* AppDelegate.swift in Sources */,
 				425FB2191E73A5FB00B2CBB8 /* WKWebViewController.swift in Sources */,
+				42FF60C71E79F85500AAC9C2 /* View3.swift in Sources */,
+				42FF60C31E79F57800AAC9C2 /* View2.swift in Sources */,
+				42FF60BF1E79F40800AAC9C2 /* View1.swift in Sources */,
 				4248E91B1E6B7A1E00DA207C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
