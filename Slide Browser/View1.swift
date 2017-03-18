@@ -9,11 +9,12 @@
 import UIKit
 
 class View1: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+         self.view.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
     }
 
     override func didReceiveMemoryWarning() {
