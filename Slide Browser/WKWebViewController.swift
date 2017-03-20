@@ -67,6 +67,7 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+
         if let unWrapURL = url {
             let myURL = URL(string: "http://" + unWrapURL)
             let myRequest = URLRequest(url: myURL!)
@@ -77,9 +78,12 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
             webView.load(myRequest)
         }
         
+        
         if backButtonTapped == true && webView.canGoBack == true{
             webView.goBack()
         }
+        
+        print(goButtonTapped)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

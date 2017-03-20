@@ -9,6 +9,7 @@
 import UIKit
 
 var url:String?
+var goButtonTapped = false
 
 class URLVC: UIViewController {
     
@@ -17,8 +18,6 @@ class URLVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +27,10 @@ class URLVC: UIViewController {
     
     @IBAction func goButton(_ sender: Any) {
         url = urlField.text
-        WKWebViewController.load()
+        goButtonTapped = true
     }
+    
+
 
     /*
     // MARK: - Navigation

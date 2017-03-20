@@ -32,6 +32,10 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
         if let firstViewController = viewControllerList.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
+        //Jump to specific page on Go Button tap
+        if goButtonTapped == true {
+            self.setViewControllers(viewControllerList, direction: .forward, animated: true, completion: nil)
+        }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
