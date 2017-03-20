@@ -14,16 +14,12 @@ class WKWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate,
     var progBar = UIProgressView()
     var pullRefreshBar = UIProgressView()
 
-    var url: String?
     var backButtonTapped = false
     
     //sets inital URL
     var initialURL: String = "https://www.facebook.com"
     
-    //Hides Status Bar
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+
     
     
     override func viewWillAppear(_ animated: Bool) {

@@ -13,11 +13,7 @@ class MenuViewController: UIViewController {
 
     var menuURL:String?
     var menuBackButtonTapped = false
-    
-    //hides status bar
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +58,7 @@ class MenuViewController: UIViewController {
     //Passes the text field url when segueing to the WKWebview
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let webViewPage : WKWebViewController = segue.destination as! WKWebViewController
-        webViewPage.url = menuURL
+        //webViewPage.url = menuURL
         webViewPage.backButtonTapped = menuBackButtonTapped
         webViewPage.progBar.progress = 0.0
     }
